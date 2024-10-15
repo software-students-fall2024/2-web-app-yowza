@@ -146,7 +146,7 @@ def get_app(use): #can potentially also be used for making requests?
         code = request.form["code"]
         result=appliance_collection.find_one({
             "code":code
-        })
+        }) #find is not working for some reason
     else:
         result = appliance_collection.find_one({
             "building": request.form["bname"],
